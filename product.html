@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal Aprendizado Microsoft Office — Word, Excel e PowerPoint</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo"><img src="assets/img/office_logo.png" alt="Logo Office"></div>
+        <div>
+          <h1 id="pageTitle">Exercícios</h1>
+          <p id="pageSubtitle">Básico • Intermediário</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <img src="assets/img/senai-logo.jpg" alt="Logo SENAI" class="senai-logo">
+        <a class="btn secondary" href="index.html">Voltar ao portal</a>
+        <a class="btn" id="refLink" target="_blank" rel="noopener noreferrer">Abrir referência oficial</a>
+        <button class="btn" id="resetProgress" type="button">Resetar progresso</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2 id="productName">Produto</h2>
+      <p id="productDesc">Descrição</p>
+      <div class="progress-container">
+        <div class="progress-info">
+          <span>Progresso</span>
+          <span id="progressText">0 / 10</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progressBar" class="progress-bar-inner"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-block notice-delivery">
+      <p><strong>Atenção:</strong> Todos os arquivos resultantes dos exercícios devem ser entregues na atividade correspondente no Google Classroom.</p>
+    </div>
+
+    <section class="section-block">
+      <div class="section-head">
+        <h2>Básico</h2>
+        <p>Comece pelo essencial. Faça em ordem para evoluir mais rápido.</p>
+      </div>
+      <div id="basicList" class="exercise-list"></div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-head">
+        <h2>Intermediário</h2>
+        <p>Desafios práticos que combinam habilidades para resolver situações do dia a dia.</p>
+      </div>
+      <div id="intermediateList" class="exercise-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="assets/img/senai-logo.jpg" alt="Logo SENAI" class="footer-logo">
+      
+    </div>
+    <span id="copyright"></span>
+    <p>Desenvolvido por Prof. Daniel Meireles do Rego - SENAI "Antonio Devisate" - CFP 8.01</p>
+  </footer>
+
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/product.js" defer></script>
+  <script>
+    document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Portal Office`;
+  </script>
+</body>
+</html>

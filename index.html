@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal Aprendizado Microsoft Office — Word, Excel e PowerPoint</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="page-home">
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo"><img src="assets/img/office_logo.png" alt="Logo Office"></div>
+        <div>
+          <h1>Portal de Aprendizado do Microsoft Office</h1>
+          <p>Word • Excel • PowerPoint</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <img src="assets/img/senai-logo.jpg" alt="Logo SENAI" class="senai-logo">
+        <button class="btn secondary" id="btnHome" type="button">Início</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Objetivo do portal</h2>
+      <p>
+        Este portal é mantido pelos três mestres das artes do Office: <strong>WordTron</strong> (Word),
+        <strong>Excelion</strong> (Excel) e <strong>P.Painter</strong> (PowerPoint).
+        Aqui você encontrará trilhas de exercícios e referências oficiais para aprimorar suas habilidades.
+      </p>
+    </section>
+
+    <section class="grid" id="cards" aria-label="Lista de produtos"></section>
+
+    <div id="imageModal" class="modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modalImage" alt="Imagem do Mestre em tamanho grande">
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="assets/img/senai-logo.jpg" alt="Logo SENAI" class="footer-logo">
+      
+    </div>
+    <span id="copyright"></span>
+    <p>Desenvolvido por Prof. Daniel Meireles do Rego - SENAI "Antonio Devisate" - CFP 8.01</p>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+  <script>
+    document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Portal de Aprendizado do Microsoft Office`;
+  </script>
+</body>
+</html>

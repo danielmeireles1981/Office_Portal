@@ -1,0 +1,302 @@
+// Dados (você pode editar e expandir à vontade)
+window.PORTAL_DATA = {
+  word: {
+    name: "Word",
+    desc: "Trilha com 5 grandes atividades, começando com configurações essenciais e avançando para desafios práticos que estimulam a criatividade e o conhecimento.",
+    referenceUrl: "https://support.microsoft.com/pt-br/word",
+    basic: [
+      {
+        id: "word-1",
+        title: "Atividade 1: Configuração e Formatação Essencial",
+        objective: "Preparar um documento com as formatações básicas e elementos de padronização.",
+        modelText: "A IMPORTÂNCIA DA ORGANIZAÇÃO DIGITAL\n\n1.1 Por que organizar arquivos?\nOrganizar arquivos e pastas reduz o tempo gasto procurando documentos e evita perdas de informações importantes. Quando cada arquivo tem nome claro e fica em um local lógico, o trabalho flui melhor e os erros diminuem.\n\nAlém disso, a organização ajuda na colaboração. Em equipes, um padrão simples de pastas e nomes facilita entender versões e localizar rapidamente o material correto.\n\n1.2 Boas práticas no dia a dia\nUma boa prática é criar pastas por ano e por projeto, mantendo arquivos em subpastas como “Documentos”, “Imagens” e “Relatórios”. Também é recomendado usar nomes com data, por exemplo: 2026-01-02_Relatorio_Projeto.docx.\n\nPor fim, faça backups. Salvar cópias em nuvem ou em um dispositivo externo reduz riscos e protege seu trabalho contra falhas inesperadas.",
+        steps: [
+          "Copie o texto-modelo acima e cole em um novo documento do Word.",
+          "Formate todo o texto (exceto o título principal) com: Fonte Calibri, tamanho 12, espaçamento entre linhas de 1,5 e alinhamento Justificado.",
+          "Destaque o título principal e os subtítulos usando Negrito e um tamanho de fonte maior.",
+          "Insira um Cabeçalho com o nome do curso e um Rodapé com seu nome completo e a numeração de página automática.",
+        ],
+        deliverable: "Arquivo .docx. Checklist: ✅ Texto formatado. ✅ Título e subtítulos destacados. ✅ Cabeçalho e rodapé inseridos.",
+        guide: [
+          "Para o cabeçalho: Vá em `Inserir` > `Cabeçalho` e escolha um modelo simples.",
+          "Para o rodapé: Vá em `Inserir` > `Rodapé` e escolha o modelo que inclui `[Número da Página]`.",
+          "Para formatação de texto: Selecione o texto e, na aba `Página Inicial`, use as opções de Fonte, Tamanho, Espaçamento (no grupo Parágrafo) e Alinhamento.",
+        ],
+      },
+    ],
+    intermediate: [
+      {
+        id: "word-2",
+        title: "Atividade 2: Desafio - Estruturando um Relatório",
+        objective: "Organizar um documento longo usando Estilos e gerar um Sumário automático para navegação.",
+        modelText: "RELATÓRIO SIMPLES — ROTINA DE ESTUDOS\n\n1. Introdução\nEste relatório apresenta uma proposta de rotina de estudos para melhorar a consistência e reduzir atrasos nas entregas. A ideia é criar um plano realista e fácil de acompanhar.\n\n2. Etapas do plano\nA rotina deve ser executada de forma progressiva. A seguir estão cinco passos recomendados.\n\n3. Pontos de atenção\nAlguns cuidados evitam desistência e ajudam a manter o ritmo.\n\n4. Conclusão\nCom organização e disciplina, é possível melhorar resultados sem aumentar demais a carga diária.",
+        steps: [
+          "Copie o texto-modelo acima e cole em um novo documento.",
+          "Aplique o estilo 'Título 1' ao título principal e 'Título 2' aos itens '1. Introdução', '2. Etapas...', '3. Pontos...' e '4. Conclusão'.",
+          "Na seção '2. Etapas do plano', crie uma lista numerada com 5 passos para uma rotina de estudos.",
+          "Na seção '3. Pontos de atenção', crie uma lista com marcadores (bullets) com 3 cuidados a serem tomados.",
+          "Na primeira página, insira um Sumário (Tabela de Conteúdo) automático, que deve refletir a estrutura de títulos criada.",
+        ],
+        deliverable: "Arquivo .docx. Checklist: ✅ Estilos Título 1 e 2 aplicados. ✅ Listas criadas. ✅ Sumário automático funcional.",
+        guide: [
+          "Selecione um título e, na aba `Página Inicial`, no grupo `Estilos`, clique em `Título 1`.",
+          "Repita o processo para os subtítulos usando o estilo `Título 2`.",
+          "Para o sumário: Vá para a primeira página, clique em `Referências` > `Sumário` e escolha um modelo automático. Ele será gerado com base nos estilos aplicados.",
+        ],
+      },
+      {
+        id: "word-3",
+        title: "Atividade 3: Desafio - Criando um Folheto de Divulgação",
+        objective: "Explorar recursos visuais como colunas, imagens e formas para criar um material de comunicação.",
+        modelText: "OFICINA RÁPIDA: PRODUTIVIDADE NO DIA A DIA\nAprenda dicas simples para organizar tarefas, reduzir distrações e entregar atividades com mais qualidade.\n\nO que você vai aprender\n• Como planejar a semana em 10 minutos\n• Como criar uma lista de prioridades\n• Como evitar retrabalho com revisão rápida\n\nPara quem é\nEstudantes e iniciantes que querem melhorar o desempenho sem complicação.\n\nInformações\nData: ___/___/_____\nHorário: ___:___\nLocal: ___________________\nContato: (__) _____-_____",
+        steps: [
+          "Copie o texto-modelo acima e cole em um novo documento.",
+          "Configure a página para o layout de 2 colunas.",
+          "Insira uma imagem ou ícone relevante e ajuste a quebra de texto para 'Quadrado'.",
+          "Use fontes e cores criativas para o título principal.",
+          "Use uma Forma (como uma caixa de texto com borda) para destacar as informações de Data, Horário e Local.",
+        ],
+        deliverable: "Arquivo .docx. Checklist: ✅ Layout de 2 colunas. ✅ Imagem com quebra de texto. ✅ Título estilizado. ✅ Forma para destacar informações.",
+        guide: [
+          "Para configurar colunas: Vá em `Layout` > `Colunas` e selecione `Duas`.",
+          "Para inserir imagem: `Inserir` > `Imagens`. Com a imagem selecionada, clique na aba `Formato da Imagem` > `Quebra de Texto Automática` e escolha `Quadrado`.",
+          "Para inserir formas: `Inserir` > `Formas` e escolha o modelo desejado. Clique e arraste para desenhar.",
+        ],
+      },
+      {
+        id: "word-4",
+        title: "Atividade 4: Desafio - Formatando um Trabalho Acadêmico",
+        objective: "Aplicar padrões de formatação acadêmica (ABNT simplificado) em um documento.",
+        modelText: "TRABALHO ACADÊMICO (MODELO SIMPLIFICADO)\n\nA escrita acadêmica exige clareza, organização e respeito às fontes. Em textos técnicos, é comum explicar conceitos e apresentar autores que sustentam as ideias discutidas.\n\nA seguir, observe uma citação longa que deve ser formatada conforme solicitado na atividade:\n\n“Aprender a usar ferramentas digitais de edição de texto não é apenas uma habilidade técnica, mas uma competência essencial para comunicar ideias com precisão e profissionalismo. Quando o estudante domina estilos, referências e revisão, ele ganha autonomia para produzir documentos de melhor qualidade, tanto na escola quanto no trabalho.”\n\nNo contexto escolar, o uso de normas (como a ABNT) padroniza documentos e facilita a leitura. Um exemplo de termo que pode precisar de explicação é normalização.\n\nREFERÊNCIAS\nSILVA, Joana. Produção de textos acadêmicos na prática. São Paulo: Editora Exemplo, 2022.",
+        steps: [
+          "Copie o texto-modelo acima e cole em um novo documento.",
+          "Ajuste as margens da página: Superior/Esquerda = 3cm; Inferior/Direita = 2cm.",
+          "Formate o parágrafo da citação longa com recuo de 4cm à esquerda, fonte tamanho 10 e espaçamento simples.",
+          "Insira uma nota de rodapé na palavra 'normalização' para explicar seu significado (ex: 'Processo de criar e aplicar normas').",
+          "Verifique se a seção 'REFERÊNCIAS' está corretamente ao final do documento.",
+        ],
+        deliverable: "Arquivo .docx. Checklist: ✅ Margens ajustadas. ✅ Citação longa formatada. ✅ Nota de rodapé inserida.",
+        guide: [
+          "Para ajustar as margens: `Layout` > `Margens` > `Margens Personalizadas`.",
+          "Para a citação longa: Selecione o parágrafo. Na régua superior, arraste o marcador de `Recuo à Esquerda` para 4cm. Altere a fonte para tamanho 10 e o espaçamento para simples na aba `Página Inicial`.",
+          "Para a nota de rodapé: Clique no final da palavra que deseja referenciar, vá em `Referências` > `Inserir Nota de Rodapé` e digite o texto.",
+        ],
+      },
+      {
+        id: "word-5",
+        title: "Atividade 5: Desafio - Revisão Colaborativa",
+        objective: "Utilizar as ferramentas de revisão do Word para sugerir alterações em um documento sem modificar o original diretamente.",
+        modelText: "TEXTO PARA REVISÃO — VERSÃO INICIAL\n\nA tecnologia ajuda muito os estudantes no dia a dia, mas também pode atrapalhar quando usada sem objetivo. Muitas pessoas abrem várias abas ao mesmo tempo e acabam perdendo o foco do que realmente importa.\n\nUm bom hábito é definir uma tarefa por vez e fazer pequenas pausas. Assim, é possível manter a atenção e evitar erros bobos. Além disso, revisar o texto antes de entregar melhora a qualidade final.\n\nPor fim, trabalhar em equipe exige comunicação clara. Comentários e sugestões são importantes para melhorar o resultado, desde que sejam respeitosos e objetivos.",
+        steps: [
+          "Copie o texto-modelo acima e cole em um novo documento.",
+          "Ative o 'Controle de Alterações' (menu Revisão).",
+          "Faça pelo menos 3 alterações no texto (ex: corrija uma palavra, reescreva uma frase).",
+          "Insira 2 'Novos Comentários' em trechos específicos, fazendo perguntas ou sugestões.",
+          "Salve o documento com as marcações e comentários visíveis.",
+        ],
+        deliverable: "Arquivo .docx. Checklist: ✅ Controle de alterações ativado. ✅ Mínimo de 3 alterações visíveis. ✅ Mínimo de 2 comentários inseridos.",
+        guide: [
+          "Para ativar o controle: Vá para a aba `Revisão` e clique em `Controlar Alterações`. O botão ficará destacado.",
+          "Para adicionar um comentário: Selecione o texto desejado e clique em `Novo Comentário` na aba `Revisão`.",
+          "As edições que você fizer no texto (deletar, adicionar) agora ficarão marcadas automaticamente.",
+        ],
+      },
+    ],
+  },
+
+  excel: {
+    name: "Excel",
+    desc: "Trilha com 5 grandes atividades, começando com a organização de dados e avançando para desafios práticos de análise e visualização.",
+    referenceUrl: "https://support.microsoft.com/pt-br/excel",
+    basic: [
+      {
+        id: "excel-1",
+        title: "Atividade 1: Organização e Formatação de Dados",
+        objective: "Estruturar e formatar uma planilha de controle de forma profissional.",
+        modelText: "Produto;Categoria;Quantidade;Preço Unitário\nNotebook;Eletrônicos;15;2500\nSmartphone;Eletrônicos;30;1200\nCadeira de Escritório;Móveis;25;450\nMesa de Escritório;Móveis;10;600\nMonitor 24\";Eletrônicos;20;800\nTeclado Mecânico;Acessórios;50;250\nMouse sem Fio;Acessórios;60;80\nWebcam HD;Acessórios;40;150\nLuminária de Mesa;Móveis;35;120\nFone de Ouvido;Acessórios;45;200",
+        steps: [
+          "Copie os dados do modelo, cole na célula A1 do Excel e use a ferramenta 'Texto para Colunas' (na aba 'Dados') para separar os dados usando o ponto e vírgula (;) como delimitador.",
+          "Adicione a coluna 'Total' na célula E1.",
+          "Formate as colunas 'Preço Unitário' e 'Total' como Moeda (R$).",
+          "Transforme o intervalo de dados em uma Tabela (atalho: Ctrl + T) e escolha um estilo de sua preferência.",
+          "Centralize os títulos e ajuste a largura das colunas para exibir todo o conteúdo.",
+        ],
+        deliverable: "Planilha .xlsx. Checklist: ✅ Dados separados em colunas. ✅ Formato de Moeda aplicado. ✅ Convertido para Tabela. ✅ Títulos centralizados.",
+        guide: [
+          "Para 'Texto para Colunas': Selecione a coluna A, vá em `Dados` > `Texto para Colunas`, escolha `Delimitado`, avance, marque `Ponto e vírgula` e conclua.",
+          "Para formato de Moeda: Selecione as colunas, clique com o botão direito > `Formatar Células` > `Moeda`.",
+          "Para transformar em Tabela: Selecione qualquer célula com dados e pressione `Ctrl + T`. Confirme que sua tabela tem cabeçalhos.",
+        ],
+      },
+    ],
+    intermediate: [
+      {
+        id: "excel-2",
+        title: "Atividade 2: Desafio - Análise de Vendas com Fórmulas",
+        objective: "Utilizar fórmulas para calcular valores e criar análises condicionais.",
+        modelText: "Use a tabela formatada da Atividade 1 para realizar os passos a seguir.",
+        steps: [
+          "Na coluna 'Total', crie a fórmula para calcular: `Quantidade * Preço Unitário`.",
+          "Abaixo da tabela, crie um bloco de resumo para calcular: Faturamento Total (SOMA), Preço Médio (MÉDIA), Produto Mais Caro (MÁX) e Produto Mais Barato (MÍN).",
+          "Adicione uma nova coluna 'Status' na tabela. Use a função SE para exibir 'Bom Estoque' se a Quantidade for maior que 20, e 'Repor Estoque' caso contrário.",
+        ],
+        deliverable: "Planilha .xlsx. Checklist: ✅ Coluna 'Total' calculada. ✅ Bloco de resumo com fórmulas corretas. ✅ Coluna 'Status' com função SE.",
+        guide: [
+          "Fórmula do Total (dentro da tabela): `=[@Quantidade]*[@'Preço Unitário']`",
+          "Fórmula do Resumo (fora da tabela): `=SOMA(Tabela1[Total])` (substitua 'Tabela1' pelo nome da sua tabela).",
+          "Fórmula do Status: `=SE([@Quantidade]>20;\"Bom Estoque\";\"Repor Estoque\")`",
+        ],
+      },
+      {
+        id: "excel-3",
+        title: "Atividade 3: Desafio - Relatório Visual com Gráficos",
+        objective: "Criar gráficos para visualizar e comunicar os resultados da análise de dados.",
+        modelText: "Use a tabela com os dados das atividades anteriores para criar os gráficos.",
+        steps: [
+          "Crie um Gráfico de Colunas que mostre o faturamento ('Total') de cada 'Produto'.",
+          "Crie um Gráfico de Pizza que represente a proporção de faturamento por 'Categoria'.",
+          "Personalize ambos os gráficos: adicione títulos claros, altere as cores e exiba os rótulos de dados para facilitar a leitura.",
+        ],
+        deliverable: "Planilha .xlsx. Checklist: ✅ Gráfico de Colunas criado. ✅ Gráfico de Pizza criado. ✅ Ambos os gráficos personalizados com títulos e rótulos.",
+        guide: [
+          "Para criar um gráfico: Selecione as colunas que deseja usar (ex: 'Produto' e 'Total'), vá em `Inserir` > `Gráficos` e escolha `Colunas`.",
+          "Para o gráfico de pizza, o ideal é usar dados resumidos. Você pode criar uma Tabela Dinâmica simples para somar o total por categoria e então criar o gráfico a partir dela.",
+          "Para personalizar: Clique no gráfico para habilitar as abas `Design do Gráfico` e `Formatar`. Use os botões que aparecem ao lado do gráfico para adicionar elementos.",
+        ],
+      },
+      {
+        id: "excel-4",
+        title: "Atividade 4: Desafio - Cruzando Informações com PROCV",
+        objective: "Buscar dados de uma tabela de apoio para enriquecer a análise principal.",
+        modelText: "Tabela de Apoio (para uma nova aba chamada 'Apoio'):\n\nCategoria;Comissão (%)\nEletrônicos;5%\nMóveis;8%\nAcessórios;10%",
+        steps: [
+          "Na sua planilha, crie uma nova aba chamada 'Apoio' e insira a tabela de comissão do modelo (use 'Texto para Colunas' se necessário).",
+          "Na sua tabela principal, adicione uma coluna 'Comissão (%)'. Use a função PROCV (ou XLOOKUP) para buscar a porcentagem correspondente da aba 'Apoio' com base na 'Categoria'.",
+          "Adicione uma última coluna, 'Valor Comissão', e calcule o valor da comissão (Total * Comissão (%)).",
+        ],
+        deliverable: "Planilha .xlsx. Checklist: ✅ Nova aba 'Apoio' criada. ✅ Coluna 'Comissão (%)' com PROCV funcional. ✅ Coluna 'Valor Comissão' calculada.",
+        guide: [
+          "A fórmula PROCV será algo como: `=PROCV([@Categoria];Apoio!A:B;2;FALSO)`.",
+          "Lembre-se que a coluna que você busca (Categoria) deve ser a primeira da tabela na aba 'Apoio'.",
+          "`FALSO` no final do PROCV garante uma correspondência exata. Se usar XLOOKUP, a fórmula é mais simples: `=PROCURAX([@Categoria];Apoio!A:A;Apoio!B:B)`",
+        ],
+      },
+      {
+        id: "excel-5",
+        title: "Atividade 5: Desafio - Dashboard Interativo com Tabela Dinâmica",
+        objective: "Criar um resumo interativo dos dados usando Tabela Dinâmica e Segmentação de Dados.",
+        modelText: "Use a tabela completa das atividades anteriores para este desafio final.",
+        steps: [
+          "Crie uma Tabela Dinâmica (PivotTable) em uma nova aba para somar o 'Valor Comissão' por 'Categoria'.",
+          "Adicione um Gráfico Dinâmico (pode ser de barras) baseado na sua Tabela Dinâmica.",
+          "Insira uma Segmentação de Dados (Slicer) para filtrar os resultados por 'Produto'.",
+          "Teste o dashboard: clique nos produtos na segmentação e veja a Tabela e o Gráfico Dinâmico se atualizarem automaticamente.",
+        ],
+        deliverable: "Planilha .xlsx. Checklist: ✅ Tabela Dinâmica criada. ✅ Gráfico Dinâmico inserido. ✅ Segmentação de Dados funcional.",
+        guide: [
+          "Para criar a Tabela Dinâmica: Selecione sua tabela de dados, vá em `Inserir` > `Tabela Dinâmica`.",
+          "Na janela da Tabela Dinâmica, arraste 'Categoria' para 'Linhas' e 'Valor Comissão' para 'Valores'.",
+          "Com a Tabela Dinâmica selecionada, vá em `Análise de Tabela Dinâmica` > `Gráfico Dinâmico`.",
+          "Para a segmentação: `Análise de Tabela Dinâmica` > `Inserir Segmentação de Dados` e marque 'Produto'.",
+        ],
+      },
+    ],
+  },
+
+  powerpoint: {
+    name: "PowerPoint",
+    desc: "Trilha com 5 desafios práticos para criar apresentações impactantes, do design à interatividade.",
+    referenceUrl: "https://support.microsoft.com/pt-br/powerpoint",
+    basic: [
+      {
+        id: "ppt-1",
+        title: "Atividade 1: Estrutura e Identidade Visual com Slide Mestre",
+        objective: "Criar uma base sólida e profissional para a apresentação, garantindo consistência visual.",
+        modelText: "Nesta atividade, você não precisa de um texto-modelo. O foco é criar a estrutura visual da apresentação usando o Slide Mestre.",
+        steps: [
+          "Abra o 'Slide Mestre' e modifique o slide principal: defina uma fonte padrão para títulos e textos e insira o logo da sua empresa (ou uma forma) no canto.",
+          "Crie um novo layout mestre chamado 'Layout de Seção' com um fundo de cor diferente para ser usado em slides de transição.",
+          "Feche o modo Mestre e crie 5 slides: 1 de Título, 3 de Conteúdo e 1 usando o 'Layout de Seção'.",
+          "Adicione um rodapé com numeração de slide e a data em todos os slides, exceto no de título.",
+        ],
+        deliverable: "Apresentação .pptx. Checklist: ✅ Slide Mestre modificado. ✅ Novo layout de seção criado. ✅ 5 slides na apresentação. ✅ Rodapé com numeração e data.",
+        guide: [
+          "Para abrir o Slide Mestre: Vá em `Exibir` > `Slide Mestre`.",
+          "No painel esquerdo, selecione o primeiro slide (o maior) para aplicar mudanças em todos os layouts.",
+          "Para criar um novo layout: Ainda no modo Mestre, clique em `Inserir Layout`.",
+          "Para inserir rodapé: Vá em `Inserir` > `Cabeçalho e Rodapé` e marque as caixas `Número do slide` e `Data e hora`.",
+        ],
+      },
+    ],
+    intermediate: [
+      {
+        id: "ppt-2",
+        title: "Atividade 2: Desafio - Conteúdo Visual com SmartArt e Ícones",
+        objective: "Transformar listas de texto em elementos visuais fáceis de entender.",
+        modelText: "Texto para o slide de SmartArt: 'Fase 1: Planejamento -> Fase 2: Execução -> Fase 3: Revisão'.\nTexto para o slide de Ícones: 'Comunicação, Colaboração, Criatividade'.",
+        steps: [
+          "Em um slide, use o texto do modelo para criar um processo com 'SmartArt'.",
+          "Em outro slide, use o texto do modelo para criar uma lista com 'Ícones' em vez de marcadores tradicionais.",
+          "Insira uma imagem de alta qualidade que ocupe o slide inteiro e coloque um texto legível sobre ela (use uma caixa de texto com fundo semi-transparente ou sombra no texto).",
+        ],
+        deliverable: "Apresentação .pptx. Checklist: ✅ Slide com SmartArt. ✅ Slide com Ícones. ✅ Slide com imagem de fundo e texto legível.",
+        guide: [
+          "Para inserir SmartArt: `Inserir` > `SmartArt`. Escolha um modelo de 'Ciclo' ou 'Processo'.",
+          "Para inserir Ícones: `Inserir` > `Ícones`. Pesquise por termos que representem seus tópicos.",
+          "Para imagem de fundo: `Inserir` > `Imagens`. Com a imagem selecionada, clique com o botão direito e `Enviar para Trás`.",
+        ],
+      },
+      {
+        id: "ppt-3",
+        title: "Atividade 3: Desafio - Animações e Transições com Propósito",
+        objective: "Usar animações para guiar a atenção do público de forma sutil e profissional.",
+        modelText: "Use os slides e objetos criados nas atividades anteriores. O objetivo é aplicar movimento, não criar conteúdo novo.",
+        steps: [
+          "Escolha a transição 'Transformar' (Morph) para criar um efeito de zoom ou movimento suave entre dois slides com um objeto em comum.",
+          "Em um slide com 3 a 5 tópicos, aplique a animação de entrada 'Surgir' em cada tópico, configurando para que apareçam 'Um por um' ao clicar.",
+          "Crie um gráfico e use uma animação para que suas colunas ou fatias apareçam em sequência, facilitando a explicação de cada parte.",
+        ],
+        deliverable: "Apresentação .pptx. Checklist: ✅ Transição 'Transformar' aplicada. ✅ Animação de entrada em uma lista. ✅ Animação em um gráfico.",
+        guide: [
+          "Para a transição 'Transformar': Duplique um slide. No segundo slide, mova ou redimensione um objeto. Aplique a transição `Transformar` ao segundo slide na aba `Transições`.",
+          "Para animar tópicos: Selecione a caixa de texto, vá em `Animações` > `Surgir`. No `Painel de Animação`, clique com o botão direito no efeito e em `Opções do Efeito`, mude 'Animar texto' para 'Por parágrafo'.",
+        ],
+      },
+      {
+        id: "ppt-4",
+        title: "Atividade 4: Desafio - Apresentando Dados com Gráficos e Tabelas",
+        objective: "Integrar e formatar dados de forma clara e visualmente atraente.",
+        modelText: "Dados para o Gráfico: Categoria A (10, 20, 15), Categoria B (25, 15, 30), Categoria C (12, 22, 18).\nDados para a Tabela: Produto (A, B, C), Vendas (150, 220, 180), Meta (200, 200, 200).",
+        steps: [
+          "Crie um slide com um Gráfico de Colunas usando os dados do modelo.",
+          "Formate o gráfico: remova elementos desnecessários (como linhas de grade), adicione rótulos de dados e use cores alinhadas à identidade visual da sua apresentação.",
+          "Em outro slide, crie uma Tabela com os dados do modelo. Formate-a com um cabeçalho destacado e cores alternadas nas linhas.",
+        ],
+        deliverable: "Apresentação .pptx. Checklist: ✅ Slide com gráfico formatado. ✅ Slide com tabela formatada.",
+        guide: [
+          "Para inserir Gráfico: `Inserir` > `Gráfico`. Escolha o tipo e uma planilha do Excel abrirá para você inserir os dados.",
+          "Para formatar Gráfico: Use as abas `Design do Gráfico` e `Formatar` que aparecem ao selecionar o gráfico.",
+          "Para inserir Tabela: `Inserir` > `Tabela`. Defina o número de linhas e colunas e insira os dados.",
+        ],
+      },
+      {
+        id: "ppt-5",
+        title: "Atividade 5: Desafio - Interatividade e Finalização",
+        objective: "Preparar a apresentação para ser navegável e distribuída em diferentes formatos.",
+        modelText: "Crie um slide de Sumário com os títulos: 'Introdução', 'Desenvolvimento', 'Conclusão'. Use os slides existentes como destino para os links.",
+        steps: [
+          "Crie um slide de 'Sumário' com os títulos do modelo. Para cada item, adicione um 'Hiperlink' que leve ao slide correspondente.",
+          "Em cada slide de conteúdo, insira um ícone de 'casa' e adicione um hiperlink nele para que retorne ao slide de Sumário.",
+          "Use o 'Modo de Exibição do Apresentador' para treinar sua fala, adicionando notas privadas em pelo menos dois slides.",
+          "Exporte a apresentação final como um arquivo PDF.",
+        ],
+        deliverable: "Apresentação .pptx e arquivo .pdf. Checklist: ✅ Sumário com hiperlinks. ✅ Botão de 'voltar' funcional. ✅ PDF exportado.",
+        guide: [
+          "Para criar Hiperlink: Selecione o texto ou objeto, clique com o botão direito > `Link`. Na janela, escolha `Colocar neste Documento` e selecione o slide de destino.",
+          "Para notas do apresentador: Abaixo de cada slide, há uma área que diz 'Clique para adicionar anotações'.",
+          "Para exportar como PDF: `Arquivo` > `Salvar como` (ou `Exportar`) e escolha o formato PDF.",
+        ],
+      },
+    ],
+  },
+};
