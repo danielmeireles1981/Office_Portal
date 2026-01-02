@@ -86,7 +86,7 @@ function createCard(p) {
         <a class="btn secondary" href="${viewerUrl}">
             Ver Material
         </a>
-        <a class="btn" href="${exercisesUrl}">Acessar Exercícios</a>
+        <a class="btn btn-main" href="${exercisesUrl}">Iniciar Desafios</a>
       
     </div>
   `;
