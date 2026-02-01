@@ -3,23 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portal Aprendizado Microsoft Office — Word, Excel e PowerPoint</title>
+  <title>Portal Office — Desafio Final</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
+<body data-level="final">
   <header>
     <div class="container topbar">
       <div class="brand">
         <div class="logo"><img src="assets/img/office_logo.png" alt="Logo Office"></div>
         <div>
-          <h1 id="pageTitle">Exercícios</h1>
-          <p id="pageSubtitle">Básico • Intermediário</p>
+          <h1 id="pageTitle">Desafio Final</h1>
+          <p id="pageSubtitle">Projeto integrador</p>
         </div>
       </div>
 
       <div class="nav">
         <img src="assets/img/senai-logo.jpg" alt="Logo SENAI" class="senai-logo">
         <a class="btn secondary" href="index.html">Voltar ao portal</a>
+        <a class="btn secondary" id="backProduct" href="#">Voltar à trilha</a>
         <a class="btn" id="refLink" target="_blank" rel="noopener noreferrer">Abrir referência oficial</a>
         <button class="btn" id="resetProgress" type="button">Resetar progresso</button>
       </div>
@@ -29,34 +30,21 @@
   <main class="container">
     <section class="hero">
       <h2 id="productName">Produto</h2>
-      <p id="productDesc">Descrição</p>
+      <p id="productDesc">Projeto integrador para comprovar tudo o que foi praticado.</p>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="progress-text" id="progressText"></span>
+      </div>
     </section>
 
-    <section class="section-block level-selector">
+    <section class="section-block">
       <div class="section-head">
-        <h2>Escolha o nível</h2>
-        <p>Acesse cada conjunto de atividades em páginas separadas.</p>
+        <h2 id="levelHeading">Desafio Final</h2>
+        <p id="levelSubheading">Conecte os aprendizados e entregue o projeto completo.</p>
       </div>
-      <div class="level-grid">
-        <a id="linkBasic" class="level-card" href="#">
-          <p class="badge badge-soft">Início</p>
-          <h3>Nível Básico</h3>
-          <p class="muted">Primeiros passos, formato e comandos essenciais.</p>
-          <span class="level-cta">Abrir página básica →</span>
-        </a>
-        <a id="linkIntermediate" class="level-card" href="#">
-          <p class="badge badge-soft">Prática</p>
-          <h3>Nível Intermediário</h3>
-          <p class="muted">Quatro desafios práticos para consolidar a rotina.</p>
-          <span class="level-cta">Abrir página intermediária →</span>
-        </a>
-        <a id="linkFinal" class="level-card" href="#">
-          <p class="badge badge-soft">Projeto</p>
-          <h3>Desafio Final</h3>
-          <p class="muted">Projeto integrador com checklist de entrega.</p>
-          <span class="level-cta">Abrir desafio final →</span>
-        </a>
-      </div>
+      <div id="levelList" class="exercise-list"></div>
     </section>
 
     <div class="section-block notice-delivery">
@@ -73,9 +61,8 @@
     <p>Desenvolvido por Prof. Daniel Meireles do Rego - SENAI "Antonio Devisate" - CFP 8.01</p>
   </footer>
 
-
   <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/product.js" defer></script>
+  <script src="assets/js/level.js" defer></script>
   <script>
     document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Portal Office`;
   </script>

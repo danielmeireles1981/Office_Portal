@@ -102,6 +102,22 @@ window.PORTAL_DATA = {
         ],
       },
     ],
+    final: [
+      {
+        id: "word-final",
+        title: "Desafio Final: Currículo Profissional em 1 Página",
+        objective: "Consolidar formatação, estilos e revisão para criar um currículo pronto para vaga de estágio ou primeiro emprego.",
+        modelText: "Nome Completo\nCidade/UF | (00) 90000-0000 | email@exemplo.com | linkedin.com/in/seunome\n\nObjetivo\nEstágio/trainee em administração para aplicar organização e comunicação.\n\nFormação\nCurso Técnico em Administração - SENAI (conclusão: 12/2026)\nEnsino Médio - Escola Modelo (concluído: 12/2024)\n\nExperiência / Projetos\nMonitoria escolar - organização de arquivos e suporte a professores (2025)\nProjeto Feira Tech - equipe de comunicação e criação de folder (2024)\n\nHabilidades\nPacote Office (Word, Excel, PowerPoint)\nOrganização de documentos digitais\nComunicação escrita\n\nCursos e Certificações\nCurso de Excel Básico (2025)\nWorkshop de Apresentações (2025)\n\nLinks\nPortfólio: seunome.com\nLinkedIn: linkedin.com/in/seunome",
+        steps: [
+          "Defina margens de 2,5 cm e fonte principal em 11 pt; limite o documento a uma página A4.",
+          "Crie um cabeçalho compacto com nome e contatos (linha horizontal fina logo abaixo).",
+          "Use 'Título 1' para as seções (Objetivo, Formação, Experiência, Habilidades, Cursos, Links) e mantenha espaçamento entre parágrafos de 6 pt.",
+          "Transforme a lista de Habilidades em marcadores alinhados em duas colunas (Layout > Colunas > Duas).",
+          "Insira hiperlinks para e-mail e LinkedIn; revise com Controle de Alterações e salve também em PDF.",
+        ],
+        deliverable: "Arquivo .docx (e PDF opcional). Checklist: ✅ 1 página. ✅ Seções padronizadas com estilos. ✅ Cabeçalho e hiperlinks funcionais.",
+      },
+    ],
   },
 
   excel: {
@@ -201,6 +217,22 @@ window.PORTAL_DATA = {
         ],
       },
     ],
+    final: [
+      {
+        id: "excel-final",
+        title: "Desafio Final: Orçamento Pessoal Mensal",
+        objective: "Planejar receitas e despesas do mês, calcular saldo e visualizar gastos por categoria.",
+        modelText: "Mês;Tipo;Categoria;Descrição;Valor\nJan;Receita;Salário;Salário líquido;3200\nJan;Receita;Freelance;Projetos pontuais;650\nJan;Despesa;Moradia;Aluguel;1200\nJan;Despesa;Moradia;Conta de luz;180\nJan;Despesa;Transporte;Passe mensal;260\nJan;Despesa;Alimentação;Supermercado;750\nJan;Despesa;Alimentação;Almoço trabalho;220\nJan;Despesa;Saúde;Plano de saúde;260\nJan;Despesa;Lazer;Streaming;55\nJan;Despesa;Educação;Cursos online;150\nJan;Despesa;Reserva;Poupança meta;300",
+        steps: [
+          "Cole os dados na célula A1, use `Texto para Colunas` com delimitador `;` e transforme em Tabela chamada `Orcamento` (Ctrl+T).",
+          "Formate valores como Moeda (R$) e aplique cor diferente para linhas de Receita e Despesa usando Formatação Condicional (Regra de texto).",
+          "Crie um resumo: Receitas Totais (`=SOMASES(Orcamento[Valor];Orcamento[Tipo];\"Receita\")`), Despesas Totais (\"Despesa\"), Saldo (Receitas - Despesas) e Percentual Guardado (Reserva/Receitas).",
+          "Insira um Gráfico de Pizza ou Rosca mostrando a distribuição das Despesas por Categoria; destaque o maior gasto com rótulo de dados.",
+          "Adicione uma Segmentação de Dados por Tipo (Receita/Despesa) para filtrar gráfico e tabela rapidamente.",
+        ],
+        deliverable: "Planilha .xlsx. Checklist: ✅ Tabela nomeada `Orcamento`. ✅ Resumo com SOMASES e saldo. ✅ Gráfico por categoria. ✅ Segmentação funcional.",
+      },
+    ],
   },
 
   powerpoint: {
@@ -296,6 +328,22 @@ window.PORTAL_DATA = {
           "Para notas do apresentador: Abaixo de cada slide, há uma área que diz 'Clique para adicionar anotações'.",
           "Para exportar como PDF: `Arquivo` > `Salvar como` (ou `Exportar`) e escolha o formato PDF.",
         ],
+      },
+    ],
+    final: [
+      {
+        id: "ppt-final",
+        title: "Desafio Final: Apresentação Pessoal",
+        objective: "Contar sua história em 6 slides, aplicando identidade visual, hierarquia e entrega em PDF.",
+        modelText: "Slide 1: Título com nome completo e área de interesse.\nSlide 2: Sobre mim (3 frases sobre formação e objetivos).\nSlide 3: Linha do tempo (2019-2021 estudos, 2022-2024 projetos, 2025-2026 metas).\nSlide 4: Habilidades-chave (com ícones ou SmartArt).\nSlide 5: Projeto ou conquista destaque (problema, ação, resultado).\nSlide 6: Contatos (e-mail, telefone, LinkedIn, cidade).",
+        steps: [
+          "No Slide Mestre, defina paleta de 2 cores e fonte consistente; crie um layout para 'Linha do tempo' e outro para 'Projeto'.",
+          "Monte os 6 slides seguindo o texto-modelo; use no mínimo 2 fotos ou ícones e uma forma para destacar contato.",
+          "Use SmartArt ou uma linha do tempo simples no slide 3; alinhe datas em ordem e mantenha espaçamentos iguais.",
+          "Adicione animações sutis (Surgir) apenas nos títulos de cada slide e configure duração entre 0,3s e 0,6s.",
+          "Revise em Modo Apresentador, insira notas em 2 slides e exporte em PDF além do .pptx final.",
+        ],
+        deliverable: "Arquivos .pptx e .pdf. Checklist: ✅ 6 slides com identidade consistente. ✅ Linha do tempo e ícones aplicados. ✅ Notas do apresentador em 2 slides. ✅ PDF exportado.",
       },
     ],
   },

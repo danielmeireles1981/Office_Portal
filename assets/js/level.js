@@ -3,6 +3,10 @@ function getProductKey() {
   return (params.get("product") || "").toLowerCase();
 }
 
+function getLevel() {
+  return (document.body.dataset.level || "").toLowerCase();
+}
+
 function storageKey(productKey) {
   return `portal_progress_${productKey}`;
 }
@@ -23,7 +27,8 @@ function createExerciseCard(ex, checked, onToggle, productName) {
   const card = document.createElement("article");
   card.className = "exercise-card";
 
-  const modelTextHtml = ex.modelText ? `
+  const modelTextHtml = ex.modelText
+    ? `
     <div class="model-text">
       <div class="model-text-header">
         <strong>Dados para colar no ${productName}:</strong>
@@ -34,9 +39,12 @@ function createExerciseCard(ex, checked, onToggle, productName) {
       </div>
       <pre class="model-text-content">${ex.modelText}</pre>
     </div>
-  ` : '';
+  `
+    : "";
 
-  const guideHtml = ex.guide && ex.guide.length > 0 ? `
+  const guideHtml =
+    ex.guide && ex.guide.length > 0
+      ? `
     <div class="exercise-footer">
       <button class="btn-guide" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -49,11 +57,12 @@ function createExerciseCard(ex, checked, onToggle, productName) {
       <div class="exercise-guide-content">
         <h4>Como resolver:</h4>
         <ol>
-          ${ex.guide.map(g => `<li>${g}</li>`).join("")}
+          ${ex.guide.map((g) => `<li>${g}</li>`).join("")}
         </ol>
       </div>
     </div>
-  ` : '';
+  `
+      : "";
 
   card.innerHTML = `
     <div class="exercise-top">
@@ -72,7 +81,7 @@ function createExerciseCard(ex, checked, onToggle, productName) {
       ${modelTextHtml}
       <h4>Passos da Atividade</h4>
       <ol>
-        ${ex.steps.map(s => `<li>${s}</li>`).join("")}
+        ${ex.steps.map((s) => `<li>${s}</li>`).join("")}
       </ol>
       <p class="muted"><strong>Entrega / Checklist:</strong> ${ex.deliverable}</p>
     </div>
@@ -85,17 +94,20 @@ function createExerciseCard(ex, checked, onToggle, productName) {
   const copyButton = card.querySelector(".btn-copy");
   if (copyButton) {
     copyButton.addEventListener("click", () => {
-      navigator.clipboard.writeText(ex.modelText).then(() => {
-        const buttonText = copyButton.querySelector("span");
-        buttonText.textContent = "Copiado!";
-        copyButton.disabled = true;
-        setTimeout(() => {
-          buttonText.textContent = "Copiar";
-          copyButton.disabled = false;
-        }, 2000);
-      }).catch(err => {
-        console.error('Falha ao copiar texto: ', err);
-      });
+      navigator.clipboard
+        .writeText(ex.modelText)
+        .then(() => {
+          const buttonText = copyButton.querySelector("span");
+          buttonText.textContent = "Copiado!";
+          copyButton.disabled = true;
+          setTimeout(() => {
+            buttonText.textContent = "Copiar";
+            copyButton.disabled = false;
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error("Falha ao copiar texto: ", err);
+        });
     });
   }
 
@@ -113,87 +125,117 @@ function createExerciseCard(ex, checked, onToggle, productName) {
   return card;
 }
 
-function renderList(containerId, list, progress, onToggle, productName) {
+function renderLevel(containerId, list, progress, onToggle, productName) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = "";
 
-  list.forEach(ex => {
+  if (!list || list.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "muted";
+    empty.textContent = "Nenhuma atividade disponível para este nível.";
+    container.appendChild(empty);
+    return;
+  }
+
+  list.forEach((ex) => {
     const checked = !!progress[ex.id];
     container.appendChild(createExerciseCard(ex, checked, onToggle, productName));
   });
 }
 
-function setLevelLinks(productKey) {
-  const basic = document.getElementById("linkBasic");
-  const intermediate = document.getElementById("linkIntermediate");
-  const finalLink = document.getElementById("linkFinal");
+function updateProgressUI(completed, total) {
+  const bar = document.getElementById("progressBar");
+  const text = document.getElementById("progressText");
+  const percentage = total > 0 ? (completed / total) * 100 : 0;
 
-  if (basic) basic.href = `basic.html?product=${encodeURIComponent(productKey)}`;
-  if (intermediate) intermediate.href = `intermediate.html?product=${encodeURIComponent(productKey)}`;
-  if (finalLink) finalLink.href = `final.html?product=${encodeURIComponent(productKey)}`;
+  if (bar) {
+    bar.style.width = `${percentage}%`;
+  }
+  if (text) {
+    text.textContent = `${completed} / ${total} concluídas`;
+  }
 }
 
 (function init() {
+  const level = getLevel();
   const key = getProductKey();
   const data = window.PORTAL_DATA?.[key];
 
   if (!data) {
-    document.getElementById("pageTitle").textContent = "Exercícios — produto não encontrado";
+    document.getElementById("pageTitle").textContent = "Nível não encontrado";
     document.getElementById("productName").textContent = "Produto inválido";
     document.getElementById("productDesc").textContent = "Volte ao portal e escolha Word, Excel ou PowerPoint.";
     document.getElementById("refLink").setAttribute("href", "index.html");
     return;
   }
 
-  // Tema
   document.body.classList.add(`theme-${key}`);
 
-  // Header / Info
-  document.getElementById("pageTitle").textContent = `Exercícios — ${data.name}`;
+  const levelCopy = {
+    basic: {
+      title: "Exercícios — Nível Básico",
+      heroSubtitle: "Comece pelo essencial. Faça em ordem para ganhar velocidade.",
+      sectionTitle: "Atividades Básicas",
+      sectionSubtitle: "Primeiros passos para dominar o produto.",
+    },
+    intermediate: {
+      title: "Exercícios — Nível Intermediário",
+      heroSubtitle: "Quatro desafios práticos para consolidar habilidades.",
+      sectionTitle: "Atividades Intermediárias",
+      sectionSubtitle: "Prática guiada para resolver situações reais.",
+    },
+    final: {
+      title: "Exercícios — Desafio Final",
+      heroSubtitle: "Projeto integrador para comprovar tudo o que foi praticado.",
+      sectionTitle: "Desafio Final",
+      sectionSubtitle: "Conecte os aprendizados e entregue o projeto completo.",
+    },
+  };
+
+  const copy = levelCopy[level] || levelCopy.basic;
+  const list =
+    level === "intermediate"
+      ? data.intermediate
+      : level === "final"
+      ? data.final
+      : data.basic;
+
+  const safeList = Array.isArray(list) ? list : [];
+
+  document.title = `${data.name} — ${copy.title}`;
+  document.getElementById("pageTitle").textContent = copy.title;
   document.getElementById("productName").textContent = data.name;
-  document.getElementById("productDesc").textContent = data.desc;
+  document.getElementById("productDesc").textContent = copy.heroSubtitle;
+  document.getElementById("levelHeading").textContent = copy.sectionTitle;
+  document.getElementById("levelSubheading").textContent = copy.sectionSubtitle;
 
   const refLink = document.getElementById("refLink");
-  refLink.href = data.referenceUrl;
-  setLevelLinks(key);
+  if (refLink) refLink.href = data.referenceUrl;
 
-  // Progress Bar
-  const progressBarEl = document.getElementById("progressBar");
-  const progressTextEl = document.getElementById("progressText");
-  const totalExercises = data.basic.length + data.intermediate.length + (data.final?.length || 0);
+  const backProduct = document.getElementById("backProduct");
+  if (backProduct) backProduct.href = `product.html?product=${encodeURIComponent(key)}`;
 
-  function updateProgressBar() {
-    const currentProgress = loadProgress(key);
-    const completedCount = Object.values(currentProgress).filter(Boolean).length;
-    const percentage = totalExercises > 0 ? (completedCount / totalExercises) * 100 : 0;
-
-    if (progressBarEl && progressTextEl) {
-      progressBarEl.style.width = `${percentage}%`;
-      progressTextEl.textContent = `${completedCount} / ${totalExercises}`;
-    }
-  }
-
-  // Progress
   const progress = loadProgress(key);
+  const totalActivities = safeList.length;
 
   function onToggle(exId, isChecked) {
     progress[exId] = isChecked;
     saveProgress(key, progress);
-    updateProgressBar();
+    const completed = safeList.filter((ex) => progress[ex.id]).length;
+    updateProgressUI(completed, totalActivities);
   }
 
-  renderList("basicList", data.basic, progress, onToggle, data.name);
-  renderList("intermediateList", data.intermediate, progress, onToggle, data.name);
-  if (data.final?.length) {
-    renderList("finalList", data.final, progress, onToggle, data.name);
-  }
-  updateProgressBar();
+  renderLevel("levelList", safeList, progress, onToggle, data.name);
+  const initialCompleted = safeList.filter((ex) => progress[ex.id]).length;
+  updateProgressUI(initialCompleted, totalActivities);
 
-  // Reset
-  document.getElementById("resetProgress").addEventListener("click", () => {
-    localStorage.removeItem(storageKey(key));
-    location.reload();
-  });
+  const resetBtn = document.getElementById("resetProgress");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      localStorage.removeItem(storageKey(key));
+      location.reload();
+    });
+  }
 })();

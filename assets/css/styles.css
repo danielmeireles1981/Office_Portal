@@ -765,6 +765,91 @@
         .exercise-guide-content h4 { margin: 0 0 10px; font-weight: 600; color: var(--text); }
         .exercise-guide-content ol { margin: 0 0 0 24px; padding: 0; color: var(--muted); }
 
+        .badge-soft {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.04);
+            color: var(--muted);
+            font-size: 0.8rem;
+            margin: 0;
+            border: 1px solid var(--border);
+            font-weight: 600;
+        }
+
+        /* Navegação por nível */
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .level-card {
+            display: block;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--panel);
+            box-shadow: var(--shadow);
+            color: var(--text);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .level-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent);
+        }
+
+        .level-card h3 {
+            margin: 6px 0 6px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .level-card .muted {
+            margin-bottom: 8px;
+        }
+
+        .level-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 4px;
+        }
+
+        /* Progresso por nÃ­vel */
+        .progress-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .progress-track {
+            flex: 1;
+            height: 10px;
+            background: var(--hover-bg);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            border-radius: inherit;
+            width: 0%;
+            transition: width 0.25s ease;
+        }
+
+        .progress-text {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
         /* Modal para Imagem */
         .modal {
             display: none;
